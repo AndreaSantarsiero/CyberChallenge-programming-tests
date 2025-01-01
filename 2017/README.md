@@ -31,7 +31,7 @@ Questa cartella contiene il materiale relativo al problema "Diet" proposto nel t
 5. Verifica che l'output generato dal programma in **[out.txt](out.txt)** sia equivalente al rispettivo output fornito.
 
 ## Note
-La soluzione proposta in **[diet.c](diet.c)** è già stata corretta seguendo gli spunti presenti nella **[soluzione ufficiale](2017-programming.pdf)**. Per chi volesse approfondire consultado la mia soluzione originale (incompleta), vedere i commit precedenti di **[diet.c](diet.c)**.
+La soluzione proposta in **[diet.c](diet.c)** è già stata corretta seguendo gli spunti presenti nella **[soluzione ufficiale](2017-programming.pdf)**. Consultare i commit precedenti per accedere alla mia soluzione originale (incompleta).
 
 ---
 

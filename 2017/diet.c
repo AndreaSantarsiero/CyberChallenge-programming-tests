@@ -1,7 +1,5 @@
-//day 1 starting time: 23:26
-//after 1h 40min is not working.
-//day 2 starting time: 21:52
-//after 1h 10min is not working, but improved. official time finished
+//versione corretta basata sugli spunti della soluzione proposta
+//per accedere alla mia versione al termine delle 3 ore (non corretta), consultare i commit precedenti
 
 #include <stdio.h>
 int scanfReturn = 0;
@@ -9,19 +7,15 @@ int scanfReturn = 0;
 
 
 
-void ordineDecrescenteParziale(int* array, int posizione);
-int calcolaPesoTotale(int* array, int arrayLenght);
-int calcolaPotenziale(int* array, int arrayLenght, int posizione);
-void copiaArray(int* array, int* copia, int arrayLenght);
+int findMaxIndex(int* array, int arrayLenght);
 void printOutput(int* array, int arrayLenght);
-int findNextPosizione(int posizione, int* array, int arrayLenght);
 
 
 
 
 int main(int argc, char *argv[]){
     //inizializzazione
-    int sandwitchNumber = 0, maxPotenziale = 0;
+    int sandwitchNumber = 0, index = 0;
     scanfReturn = scanf("%d", &sandwitchNumber);
 
     if(sandwitchNumber < 1 && sandwitchNumber > 10000){
@@ -30,99 +24,57 @@ int main(int argc, char *argv[]){
     }
 
 
-    int sandwitches[sandwitchNumber], temp[sandwitchNumber], solution[sandwitchNumber];
+    int sandwitches[sandwitchNumber], weights[sandwitchNumber], nextIndex[sandwitchNumber], solution[sandwitchNumber];
 
     for(int i = 0; i < sandwitchNumber; i++){
         scanfReturn = scanf("%d", &sandwitches[i]);
     }
-
-
     for(int i = 0; i < sandwitchNumber; i++){
-        maxPotenziale = 0;
-
-        for(int j = i; j < sandwitchNumber; j++){
-            copiaArray(sandwitches, temp, sandwitchNumber);
-            ordineDecrescenteParziale(temp, j);
-            if(calcolaPotenziale(temp, sandwitchNumber, j) > maxPotenziale){
-                maxPotenziale = calcolaPotenziale(temp, sandwitchNumber, j);
-                copiaArray(temp, solution, sandwitchNumber);
-            }
-        }
-        sandwitches[i] = solution[i];
-
-        /* printf("iterazione %d:\n", i);
-        printOutput(solution, sandwitchNumber);
-        printf("\n-----------------------------------\n"); */
+        nextIndex[i] = -1;
+    }
+    for(int i = 0; i < sandwitchNumber; i++){
+        solution[i] = 0;
     }
 
-    
-    printOutput(sandwitches, sandwitchNumber);
+
+    for(int i = (sandwitchNumber-1); i >= 0; i--){
+        weights[i] = sandwitches[i];
+
+        for(int j = i+1; j < sandwitchNumber; j++){
+            if(sandwitches[j] > sandwitches[i]){
+                continue;   //non devo fare nulla perchè weights[i] già vale sandwitches[i]
+            }
+            if(weights[j]+sandwitches[i] > weights[i]){
+                weights[i] = weights[j]+sandwitches[i];
+                nextIndex[i] = j;
+            }
+        }
+    }
+
+
+    index = findMaxIndex(weights, sandwitchNumber);
+    for(int i = 0; i < sandwitchNumber && index > -1; i++){
+        solution[i] = sandwitches[index];
+        index = nextIndex[index];
+    }
+
+    printOutput(solution, sandwitchNumber);
     return 0;
 }
 
 
 
 
-void ordineDecrescenteParziale(int* array, int posizione){
-    int max = 0;
-
-    for(int i = 0; i <= posizione; i++){
-        if(array[i] >= array[posizione]){
-            max = array[i];
-            break;
-        }
-    }
-
-    for(int i = 0; i < posizione; i++){
-        if(array[i] > max){
-            array[i] = 0;
-        }
-        else if (array[i] > 0){
-            max = array[i];
-        }
-    }
-}
-
-
-int calcolaPotenziale(int* array, int arrayLenght, int posizione){
-    int potenziale = 0;
+int findMaxIndex(int* array, int arrayLenght){
+    int index = 0;
 
     for(int i = 0; i < arrayLenght; i++){
-        if(i < posizione && array[i] > array[posizione]){
-            potenziale += array[i];
-        }
-        else if(i > posizione && array[i] < array[posizione]){
-            potenziale += array[i];
-        }
-        else if(i == posizione){
-            potenziale += array[i];
-        }
-        else{
-            array[i] = 0;
+        if(array[i] > array[index]){
+            index = i;
         }
     }
 
-    return potenziale;
-}
-
-
-
-int calcolaPesoTotale(int* array, int arrayLenght){
-    int pesoTotale = 0;
-
-    for(int i = 0; i < arrayLenght; i++){
-        pesoTotale += array[i];
-    }
-
-    return pesoTotale;
-}
-
-
-
-void copiaArray(int* fonteDati, int* copia, int arrayLenght){
-    for(int i = 0; i < arrayLenght; i++){
-        copia[i] = fonteDati[i];
-    }
+    return index;
 }
 
 

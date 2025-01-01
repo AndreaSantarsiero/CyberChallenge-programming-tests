@@ -28,10 +28,10 @@ Questa cartella contiene il materiale relativo al problema "Diet" proposto nel t
 2. Consulta la soluzione dettagliata in **[2017-programming.pdf](2017-programming.pdf)** per comprendere il ragionamento alla base.
 3. Compila ed esegui il file **[diet.c](diet.c)** utilizzando il **[Makefile](Makefile)**.
 4. Utilizza i casi di test nella cartella **[2017-diet-dataset/](2017-diet-dataset/)** per testare la soluzione.
-5. Verifica l'output generato dal programma in **[out.txt](out.txt)** confrontandolo con il rispettivo output corretto fornito.
+5. Verifica che l'output generato dal programma in **[out.txt](out.txt)** sia equivalente al rispettivo output fornito.
 
 ## Note
-La soluzione proposta in **[diet.c](diet.c)** è già stata corretta seguendo gli spunti presenti nella **[soluzione ufficiale](2017-programming.pdf)**. Per chi volesse approfondire consultado la mia soluzione originale (incompleta), vedere i commit.
+La soluzione proposta in **[diet.c](diet.c)** è già stata corretta seguendo gli spunti presenti nella **[soluzione ufficiale](2017-programming.pdf)**. Per chi volesse approfondire consultado la mia soluzione originale (incompleta), vedere i commit precedenti di **[diet.c](diet.c)**.
 
 ---
 

@@ -37,10 +37,9 @@ La cartella contiene i seguenti file:
 1. **`array.cpp`**: Un file di esempio che contiene codice C++ per esercitarsi con gli **array**. In questo file troverai implementazioni di operazioni di base sugli array come ordinamento, ricerca e manipolazione di sottoinsiemi.
 
 2. **`Makefile`**: Un file di configurazione per facilitare la compilazione del progetto. Con il Makefile, puoi compilare il tuo codice velocemente usando il comando:
-```bash
-make array
-```
-
+   ```bash
+   make array
+   ```
    Questo genererà il file eseguibile `array` dalla sorgente `array.cpp`.
 
 ## Istruzioni
@@ -48,24 +47,24 @@ make array
 Per eseguire il codice, segui questi passaggi:
 
 1. Clona il repository:
-```bash
-git clone <URL repository>
-```
+   ```bash
+   git clone <URL repository>
+   ```
 
 2. Vai nella cartella del progetto:
-```bash
-cd <nome cartella>
-```
+   ```bash
+   cd <nome cartella>
+   ```
 
 3. Compila il progetto usando `make`:
-```bash
-make array
-```
+   ```bash
+   make array
+   ```
 
 4. Esegui il programma:
-```bash
-./array
-```
+   ```bash
+   ./array
+   ```
 
 ## Conclusioni
 

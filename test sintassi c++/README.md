@@ -1,6 +1,6 @@
-# Esercitazioni in C++ per Competitive Programming
+# Sintassi C++ per Competitive Programming
 
-Questo repository contiene esercizi di programmazione competitiva con focus sulla sintassi di C++ e sulle strutture dati fondamentali, in particolare **array**. Il linguaggio C++ è scelto per i suoi vantaggi rispetto al C in contesti di competizioni di programmazione, grazie a funzionalità avanzate e librerie potenti.
+Questo repository contiene esercizi di programmazione in C++ con focus sulla sintassi e sulle strutture dati fondamentali, in particolare **array** e **stringhe**. Il linguaggio C++ è scelto per i suoi vantaggi rispetto al C in contesti di competizioni di programmazione, come funzionalità avanzate e librerie più complete.
 
 ## Perché scegliere C++ invece di C per Competitive Programming?
 

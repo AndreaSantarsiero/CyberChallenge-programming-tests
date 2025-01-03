@@ -34,9 +34,9 @@ Con i **template**, è possibile scrivere funzioni e classi generiche in modo ch
 
 La cartella contiene i seguenti file:
 
-1. **`array.cpp`**: Un file di esempio che contiene codice C++ per esercitarsi con gli **array**. In questo file troverai implementazioni di operazioni di base sugli array come ordinamento, ricerca e manipolazione di sottoinsiemi.
+1. **`array.cpp`**: Un file di esempio che contiene codice C++ per esercitarsi con gli **array**. In questo file troverai implementazioni di operazioni di base sugli array come ordinamento, ricerca di massimi/minimi e manipolazione di sottoinsiemi.
 
-2. **`Makefile`**: Un file di configurazione per facilitare la compilazione del progetto. Con il Makefile, puoi compilare il tuo codice velocemente usando il comando:
+2. **`Makefile`**: Un file di configurazione per facilitare la compilazione del codice sorgente. Con il Makefile, puoi compilare il tuo codice velocemente usando il comando:
    ```bash
    make array
    ```
@@ -46,7 +46,7 @@ La cartella contiene i seguenti file:
 
 Per eseguire il codice, segui questi passaggi:
 
-1. Compila il progetto usando `make`:
+1. Compila il codice sorgente usando `make`:
    ```bash
    make array
    ```

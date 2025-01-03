@@ -50,19 +50,23 @@ Per eseguire il codice, segui questi passaggi:
 
 1. Clona il repository:
 ```bash
-git clone <URL del tuo repository>
+git clone <URL repository>
 ```
 
 2. Vai nella cartella del progetto:
 ```bash
-cd <nome della cartella>
+cd <nome cartella>
 ```
 
 3. Compila il progetto usando `make`:
-   `make`
+```bash
+make array
+```
 
 4. Esegui il programma:
-   `./array`
+```bash
+./array
+```
 
 ## Conclusioni
 

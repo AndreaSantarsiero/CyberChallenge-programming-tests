@@ -66,6 +66,3 @@ Per eseguire il codice, segui questi passaggi:
    ./array
    ```
 
-## Conclusioni
-
-L'obiettivo di questo progetto è quello di migliorare le tue abilità di programmazione con C++ risolvendo problemi di competitive programming. Utilizzando C++ puoi sfruttare caratteristiche avanzate del linguaggio per scrivere codice più efficiente e leggibile, rendendo l'esperienza di competizione ancora più interessante e produttiva.

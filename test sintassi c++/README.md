@@ -49,10 +49,14 @@ La cartella contiene i seguenti file:
 Per eseguire il codice, segui questi passaggi:
 
 1. Clona il repository:
-   `git clone <URL del tuo repository>`
+```bash
+git clone <URL del tuo repository>
+```
 
 2. Vai nella cartella del progetto:
-   `cd <nome della cartella>`
+```bash
+cd <nome della cartella>
+```
 
 3. Compila il progetto usando `make`:
    `make`

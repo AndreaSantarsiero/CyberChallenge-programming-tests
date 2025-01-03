@@ -46,22 +46,12 @@ La cartella contiene i seguenti file:
 
 Per eseguire il codice, segui questi passaggi:
 
-1. Clona il repository:
-   ```bash
-   git clone <URL repository>
-   ```
-
-2. Vai nella cartella del progetto:
-   ```bash
-   cd <nome cartella>
-   ```
-
-3. Compila il progetto usando `make`:
+1. Compila il progetto usando `make`:
    ```bash
    make array
    ```
 
-4. Esegui il programma:
+2. Esegui il programma:
    ```bash
    ./array
    ```
